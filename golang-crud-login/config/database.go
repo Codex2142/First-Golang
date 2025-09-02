@@ -9,13 +9,12 @@ import (
 
 var DB *gorm.DB
 
-func connectDB() {
-	dsn := "root:password@tcp(127.0.0.1:3306)/testdb?charset=utf8mb4&parseTime=True&loc=Local"
+func ConnectDB() {
+	dsn := "root:@tcp(127.0.0.1:3306)/go_crud_app?charset=utf8mb4&parseTime=True&loc=Local"
 	database, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
-		panic("[Server] Gagal melakukan koneksi ke database" + err.Error())
+		panic("Gagal koneksi database: " + err.Error())
 	}
-
 	DB = database
-	fmt.Println("[Server] Berhasil melakukan koneksi ke database")
+	fmt.Println("✅ Database terkoneksi")
 }

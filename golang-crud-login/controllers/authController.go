@@ -5,8 +5,8 @@ import (
 	"golang-crud-login/models"
 	"net/http"
 
+	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
-	"github.com/gin-gonic/sessions"
 	"golang.org/x/crypto/bcrypt"
 )
 

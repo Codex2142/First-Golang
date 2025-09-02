@@ -1,0 +1,8 @@
+{{ define "content" }}
+<h3 class="text-center mb-4">Dashboard</h3>
+<p class="text-center">Selamat datang, {{ .username }} 👋</p>
+<div class="d-flex justify-content-center">
+    <a href="/products" class="btn btn-primary me-2">Lihat Produk</a>
+    <a href="/logout" class="btn btn-danger">Logout</a>
+</div>
+{{ end }}
